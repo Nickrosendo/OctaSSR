@@ -1,0 +1,113 @@
+//
+// Top bar
+//
+
+.od-TopBar {
+	height: 29px;
+	font-size: $font-size-xs;
+	text-align: right;
+}
+.od-TopBar-item {
+	display: inline-block;
+	position: relative;
+	padding: ($spacer-y * .35) ($spacer-x * .5);
+	font-weight: 500;
+	color: #fff;
+	+.od-TopBar-item:before {
+		content: '|';
+		position: absolute;
+		left: -($spacer-x * .1875);
+		color: #fff;
+	}
+	&:hover { color: #fff; }
+	i {
+		float: left;
+		margin-top: ($spacer-y * .1875);
+		margin-right: ($spacer-x * .25);
+	}
+}
+
+
+//
+// Menu
+//
+
+.od-NavBar {
+	top: 0;
+	background-color: $brand-lighten;
+	font-weight: 400;
+}
+
+
+//
+// Page ::content
+//
+
+.od-Page { padding-top: ($spacer-y * 3.625); }
+
+
+//
+// Footer
+//
+
+.od-ContactForm-phone--halfWidth { width: 50%; }
+.od-ContactForm-message--size {
+	height: 100px;
+	resize: none;
+}
+.od-Social-link {
+	width: 26px;
+	height: 26px;
+	display: inline-block;
+	margin-top: ($spacer-y * .375);
+	margin-right: ($spacer-x * .25);
+	padding: ($spacer-y * .125) ($spacer-x * .3125);
+	background-color: rgba(0,0,0,.25);
+	border-radius: 50%;
+	color: #eee;
+	transition: background-color .28s cubic-bezier(.4, 0, .2, 1);
+	&:hover {
+		color: #eee;
+		text-decoration: none;
+	}
+}
+.od-Social-link--facebook		{ &:hover { background-color: #3b5998; } }
+.od-Social-link--twitter		{ &:hover { background-color: #00aced; } }
+.od-Social-link--googlePlus	{ &:hover { background-color: #d34836; } }
+.od-Social-link--linkedin		{ &:hover { background-color: #007bb5; } }
+.od-Social-link--youtube		{ &:hover { background-color: #bb0000; } }
+.od-Copyright					{ font-size: $font-size-xs; }
+
+
+//
+// Mobile
+//
+
+
+//
+// (768px) <= 1007px
+//
+
+@include media-breakpoint-down(md) {
+	// Menu
+	.od-NavBar {
+		.container {
+			margin-right: 0;
+			margin-left: 0;
+		}
+		.navbar-brand {
+			flex: 1;
+			margin-right: 0;
+			text-align: center;
+		}
+	}
+}
+
+//// (0) <= 576px
+@include media-breakpoint-down(xs) {
+	.od-TopBar { text-align: center; }
+	.od-TopBar-item {
+		padding-right: ($spacer-x * .25);
+		padding-left: ($spacer-x * .25);
+	}
+}

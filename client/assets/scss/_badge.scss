@@ -1,0 +1,8 @@
+
+.badge-lg {
+  @include badge-size($badge-padding-y-lg, $badge-padding-x-lg, $font-size-sm);
+}
+
+.badge-sm {
+  @include badge-size($badge-padding-y-sm, $badge-padding-x-sm, $font-size-xs);
+}

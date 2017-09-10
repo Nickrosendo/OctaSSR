@@ -1,0 +1,497 @@
+.od-Header--lp {
+	height: 350px;
+	color: $text-color-lighten;
+}
+.od-TableCompareCompetitors {
+	th, td { &:not(:first-child){ width: 150px; } }
+}
+
+/* Help desk
+--------------------------------------------------*/
+.od-Header--bgLPHelpDesk { background: url('/assets/images/lp/help-desk/header.jpg') no-repeat center center; }
+.od-SalesFlow-image { max-width: 100%; }
+
+$sales-flow-border: 1px dashed #aaa;
+.od-SalesFlow-arrow {
+	position: relative;
+	display: inline-block;
+	border-radius: 12px;
+	&:before {
+		position: absolute;
+		content: "\e990";
+		top: 100%;
+		margin-top: 70px;
+		font-family: 'icomoon';
+		font-size: $font-size-base;
+		font-weight: 700;
+		color: #aaa;
+	}
+	&:after {
+		content: '';
+		width: 12px;
+		height: 80px;
+		position: absolute;
+		display: inline-block;
+		top: 100%;
+		border-radius: 12px;
+	}
+}
+.od-SalesFlow-arrow--left {
+	border-right: $sales-flow-border;
+	border-bottom: $sales-flow-border;
+	border-top-right-radius: 0;
+	border-bottom-left-radius: 0;
+	&:before {
+		left: 0;
+		margin-left: -21px;
+		transform: rotate(90deg);
+	}
+	&:after {
+		left: 0;
+		margin-left: -13px;
+		border-top: $sales-flow-border;
+		border-left: $sales-flow-border;
+		border-top-right-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+}
+.od-SalesFlow-arrow--right {
+	border-left: $sales-flow-border;
+	border-bottom: $sales-flow-border;
+	border-top-left-radius: 0;
+	border-bottom-right-radius: 0;
+	&:before {
+		right: 0;
+		margin-right: -20px;
+		transform: rotate(90deg);
+	}
+	&:after {
+		right: 0;
+		margin-right: -13px;
+		border-top: $sales-flow-border;
+		border-right: $sales-flow-border;
+		border-top-left-radius: 0;
+		border-bottom-right-radius: 0;
+
+	}
+}
+
+
+/* Zendesk
+--------------------------------------------------*/
+$brand-zendesk:			#85b017;
+$text-color-zendesk:	$brand-zendesk;
+
+.bg-zendesk { background-color: $brand-zendesk !important; }
+.text-zendesk { color: $text-color-zendesk !important; }
+
+.od-Header--bgLPZenDesk {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url('/assets/images/lp/zendesk/header.jpg');
+}
+.od-Advantage-thumb { i { font-size: ($font-size-base * 3.75); } }
+
+/* Freshdesk
+--------------------------------------------------*/
+$brand-freshdesk:			#5d8376;
+$text-color-freshdesk:	$brand-freshdesk;
+
+.bg-freshdesk { background-color: $brand-freshdesk !important; }
+.text-freshdesk { color: $text-color-freshdesk !important; }
+
+.od-Header--bgLPFreshDesk {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url('/assets/images/lp/freshdesk/header_fresh.jpg');/*Alterar o caminho para a imagem FreshDesk*/
+}
+.od-Advantage-thumb { i { font-size: ($font-size-base * 3.75); } }
+
+
+/* Acelerato
+--------------------------------------------------*/
+$brand-acelerato:			#e35646;
+$text-color-acelerato:	$brand-acelerato;
+
+.bg-acelerato { background-color: $brand-acelerato !important; }
+.text-acelerato { color: $text-color-acelerato !important; }
+
+.od-Header--bgLPAcelerato {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url('/assets/images/lp/acelerato/header_acelerato.png');/*Alterar o caminho para a imagem FreshDesk*/
+}
+.od-Advantage-thumb { i { font-size: ($font-size-base * 3.75); } }
+
+
+/* Tom Tickets
+--------------------------------------------------*/
+$brand-tomticket:			#2a3f59;
+$text-color-tomticket:	$brand-tomticket;
+
+.bg-tomticket { background-color: $brand-tomticket !important; }
+.text-tomticket { color: $text-color-tomticket !important; }
+
+.od-Header--bgLPTomticket {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url('/assets/images/lp/tomticket/header_Tomticket.png');/*Alterar o caminho para a imagem FreshDesk*/
+}
+.od-Advantage-thumb { i { font-size: ($font-size-base * 3.75); } }
+
+
+/* Mill desk
+--------------------------------------------------*/
+$brand-milldesk:			#ff8400;
+$text-color-milldesk:	$brand-milldesk;
+
+.bg-milldesk { background-color: $brand-milldesk !important; }
+.text-milldesk { color: $text-color-milldesk !important; }
+
+.od-Header--bgLPMilldesk {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url('/assets/images/lp/.png');/*Alterar o caminho para a imagem FreshDesk*/
+}
+.od-Advantage-thumb { i { font-size: ($font-size-base * 3.75); } }
+
+
+
+/* Chat
+--------------------------------------------------*/
+
+
+
+.od-Header--bgLPChat {
+	background: url('/assets/images/lp/chat/header.jpg') no-repeat center center;
+}
+
+.od-CustomerExpectations-thumb {
+	>i { font-size: ($font-size-base * 5) }
+}
+
+.od-ChatInstall {
+	.icon-angle-right {
+		text-align: center;
+		font-size: 70px;
+	}
+	>div {
+		.step {
+			height: 169px;
+			display: inline-block;
+			margin-bottom: ($spacer-y * 2);
+			background: url('/assets/images/lp/chat/chat-instalacao.png') no-repeat;
+		}
+		.copy {
+			width: 129px;
+			background-position: -4px 0;
+		}
+		.paste {
+			width: 222px;
+			background-position: -138px 0;
+		}
+		.talk {
+			width: 126px;
+			background-position: -365px 0;
+		}
+	}
+}
+
+
+.od-ChatSettings {
+	.icon, .box { position: absolute; }
+	.box {
+		display: inline-block;
+		padding: $spacer;
+		-webkit-border-radius: 8px;
+		-moz-border-radius: 8px;
+		border-radius: 8px;
+	}
+	.circle_teste{
+		font-size: 80px;
+		z-index: 1 ;
+	}
+	// border-radius: 50%;
+	// 	width: 3.75rem;
+	// 	height: 3.75rem;
+
+	.icon-bullet-top-left{
+
+
+		top: 0;
+		margin-top: 0;
+		margin-left: 0;
+		font-size: 40px;
+		position: absolute;
+		p{
+			z-index: 2;
+			position: relative;
+			margin-top: -2.5rem;
+			font-size: 30px;
+			color: white;
+		}
+	}
+
+	.icon-bullet-top-right{
+		top: 0;
+		margin-top: 0;
+		right: 0;
+		margin-right: 25%;
+		font-size: 40px;
+		position: absolute;
+		p{
+			z-index: 2;
+			position: relative;
+			margin-top: -2.5rem;
+			font-size: 30px;
+			color: white;
+		}
+	}
+
+	.icon-bullet-bottom-right{
+		bottom: 10rem;
+		right: 0;
+	    margin-right: 25%;
+		font-size: 40px;
+		position: absolute;
+		p{
+			z-index: 2;
+			position: relative;
+			margin-top: -2.5rem;
+			font-size: 30px;
+			color: white;
+		}
+	}
+
+	.icon-arrow-left {
+		top: 0;
+		margin-top: -15px;
+		margin-left: -50px;
+		font-size: 80px;
+	}
+	.box-left {
+		top: 0;
+		margin-top: 50px;
+		margin-left: -200px;
+	}
+	.icon-arrow-top-right {
+		top: 0;
+		margin-top: 15px;
+		margin-left: -25px;
+		font-size: 65px;
+	}
+	.box-top-right {
+		top: 0;
+		margin-top: 25px;
+    	margin-left: 50px;
+	}
+	.icon-arrow-bottom-left {
+		bottom: 0;
+		margin-bottom: 25px;
+		margin-left: -20px;
+		font-size: 65px;
+	}
+	.box-bottom-left {
+		bottom: 0;
+		margin-bottom: 25px;
+		margin-left: 55px;
+	}
+}
+
+.od-Wrapper--bgChatAvailable {
+	min-height: 600px;
+	background-color: #5da9dd;
+}
+.od-ChatAvailable--day,
+.od-ChatAvailable--night {
+	height: 509px;
+	font-size: $font-size-xs;
+	font-weight: 400;
+	overflow: hidden;
+	>i {
+		font-size: 120px;
+		margin-top: 65px;
+    	display: block;
+	}
+	>div {
+		max-width: 360px;
+		margin-top: 65px;
+	}
+}
+
+.od-ChatAvailable--day {
+	background: url('/assets/images/lp/chat/dia-noite.jpg') no-repeat left center;
+	>i, >div { float: right; }
+	>i {
+		margin-right: -98px;
+		color: #f9c900;
+		font-size: 166px;
+		margin-top: 39px;
+	}
+	>div { margin-right: 72px;}
+}
+
+.od-ChatAvailable--night {
+	background: url('/assets/images/lp/chat/dia-noite.jpg') no-repeat right center;
+	>i, >div { float: left; }
+	>i {
+		margin-left: -75px;
+		color: $brand-lighten;
+	}
+	>div { margin-left: 95px; }
+}
+
+.bubble {
+	position: relative;
+	width: 360px;
+	height: 75px;
+	padding: 0px;
+	padding-top: ($spacer-y * .6);
+	background: #FFF;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	font-size: $font-size-lg;
+	line-height: 1.2;
+	&:after {
+		content: '';
+		position: absolute;
+		border-style: solid;
+		border-width: 10px 10px 0;
+		border-color: #FFF transparent;
+		display: block;
+		width: 0;
+		z-index: 1;
+		bottom: -10px;
+		left: 170px;
+	}
+}
+
+$brand-chat:		#006666;
+$text-color-chat:	$brand-chat;
+
+.text-chat { color: $text-color-chat; }
+
+.od-OctachatPricing-value {
+	position: relative;
+    width: 230px;
+	height: 210px;
+	margin-left: ($spacer-x * 2);
+    padding: ($spacer-y * 3.125) ($spacer-x * 2.5);
+	background: $body-bg;
+	box-shadow: 2px 3px 3px 0 rgba(0, 0, 0, .1);
+    text-align: center;
+    -webkit-border-top-left-radius: 130px 120px;
+    -webkit-border-top-right-radius: 130px 120px;
+    -webkit-border-bottom-right-radius: 130px 120px;
+    -webkit-border-bottom-left-radius: 130px 120px;
+    -moz-border-radius: 130px / 120px;
+    border-radius: 130px / 120px;
+	&::before {
+		content: '';
+		width: 0;
+		height: 0;
+		display: inline-block;
+		position: absolute;
+		bottom: 21px;
+		left: 22px;
+		border-bottom: 25px solid #fff;
+		border-right: 25px solid transparent;
+		box-shadow: 0 3px 0 0 rgba(0, 0, 0, .1);
+	}
+	span { display: block; }
+}
+
+.od-OctachatPricing-value--letBigger {
+	font-size: ($font-size-base * 4.375);
+	font-weight: bold;
+	line-height: $line-height-xs;
+	sup { font-size: $font-size-h1; }
+}
+
+/* Mobile (up)
+--------------------------------------------------*/
+
+
+/* Mobile (down)
+--------------------------------------------------*/
+
+//
+// (768px) <= 1007px
+//
+
+@include media-breakpoint-down(md) {
+	.od-Header--lp {
+		height: 190px;
+		background-size: 1200px;
+	}
+
+
+	// Chat
+	.od-ChatAvailable--day,
+	.od-ChatAvailable--night {
+		text-align: center;
+		>i, >div {
+			float: none;
+			margin: 0;
+		}
+		>div { display: inline-block; }
+		>i { margin-top: -4rem }
+	}
+
+	.od-ChatAvailable--day{
+		>i{
+			margin-top: -6rem;
+		}
+	}
+	.od-ChatAvailable--day {
+
+
+
+		// >i,
+		// >div {
+		// 	float: none;
+		// 	margin: 0;
+		// }
+
+		// >i { margin-right: 50%; }
+		// >div { margin-right: 50%; }
+	}
+
+
+
+}
+
+
+//
+// (640px) <= 751px
+//
+
+@include media-breakpoint-down(sm) {
+
+	.od-Header--bgLPZenDesk {
+		background-position-x: -420px;
+		background-image: url('/assets/images/lp/zendesk/header-mobile.jpg');
+	}
+	.od-TableCompareCompetitors {
+		th>.text-truncate,
+		td>.text-truncate { width: 50px; }
+		th, td { &:not(:first-child){ width: 75px; } }
+	}
+}
+
+//
+// (0) <= 576px
+//
+
+@include media-breakpoint-down(xs) {
+
+	.icon-bullet-top-right{
+		margin-right: 15% !important ;
+	}
+
+	.icon-bullet-bottom-right{
+		margin-right: 20% !important;
+	}
+}
+

@@ -1,0 +1,242 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+
+// Colors
+//
+// Grayscale and brand colors for use across Bootstrap.
+
+$gray-dark:                 #373a3c !default;
+// $gray:                      #55595c !default;
+// $gray-light:                #818a91 !default;
+// $gray-lighter:              #eceeef !default;
+// $gray-lightest:             #f7f7f9 !default;
+
+$brand-primary:             	#388ec8 !default;
+$brand-success:             	#5cb85c !default;
+$brand-info:                	#7f52a1 !default;
+$brand-warning:             	#ffa919 !default;
+$brand-danger:              	#d9534f !default;
+// $brand-inverse:             	$gray-dark !default;
+$brand-lighten:								#fff;
+
+$state-info-text:							#8357a4 !default;
+$state-info-bg:             	#ece5f1 !default;
+
+$text-color-highlight:      	#7f52a1 !default;
+$text-color-darken:         	#333 !default;
+$text-color:                	#666 !default;
+$text-color-lighten:        	#fff !default;
+
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-flex:               true !default;
+$enable-shadows:            true !default;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer:   1rem !default;
+$spacer-x: $spacer !default;
+$spacer-y: $spacer !default;
+$spacers: (
+  0: (
+    x: 0,
+    y: 0
+  ),
+  1: (
+    x: $spacer-x,
+    y: $spacer-y
+  ),
+  2: (
+    x: ($spacer-x * 1.5),
+    y: ($spacer-y * 1.5)
+  ),
+  3: (
+    x: ($spacer-x * 2),
+    y: ($spacer-y * 2)
+  ),
+	4: (
+    x: ($spacer-x * 2.5),
+    y: ($spacer-y * 2.5)
+  ),
+	5: (
+    x: ($spacer-x * 3),
+    y: ($spacer-y * 3)
+  ),
+	6: (
+    x: ($spacer-x * 3.5),
+    y: ($spacer-y * 3.5)
+  ),
+	7: (
+    x: ($spacer-x * 4),
+    y: ($spacer-y * 4)
+  ),
+	8: (
+    x: ($spacer-x * 4.5),
+    y: ($spacer-y * 4.5)
+  ),
+	9: (
+    x: ($spacer-x * 5),
+    y: ($spacer-y * 5)
+  ),
+	10: (
+    x: ($spacer-x * 5.5),
+    y: ($spacer-y * 5.5)
+  ),
+	11: (
+    x: ($spacer-x * 6),
+    y: ($spacer-y * 6)
+  )
+) !default;
+// $border-width: 1px !default;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+//$body-bg:    #fff !default;
+$body-color: $text-color !default;
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+/*--------------------------------------------------
+
+xs 			 (0)  =>			 0  >>  576px   (container = 100%)
+sm   (640px)  =>   577px  >>  751px   (container = 544px)
+md   (768px)  =>   752px  >>  1007px  (container = 720px)
+lg  (1024px)  =>  1008px  >>  1263px  (container = 976px)
+xl  (1280px)  =>  1264px  >>  1349px  (container = 1232px)
+xxl (1366px)  =>  1350px  >>  ...     (container = 1274px)
+
+--------------------------------------------------*/
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 752px,
+  lg: 1008px,
+  xl: 1264px,
+  xxl: 1350px
+) !default;
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 544px,
+  md: 720px,
+  lg: 976px,
+  xl: 1232px,
+  xxl: 1274px
+) !default;
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-gutter-width-base:     32px !default;
+
+
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+
+// Pixel value used to responsively scale all typography. Applied to the `<html>` element.
+// $font-size-root: 16px !default;
+
+$font-size-h1:				2.5rem !default;				//40px
+$font-size-h2:					1.875rem !default;			//30px
+$font-size-h3:				1.75rem !default;				//28px
+$font-size-h4: 					1.3125rem !default;			//21px
+$font-size-h5:					1.125rem !default;			//18px
+// $font-size-h6:				1rem !default;					//16px
+
+$font-size-xs:				.75rem !default;				//12px
+$font-size-sm:				.875rem !default;				//14px
+$font-size-base:			1rem !default;					//16px
+// $font-size-lg:				1.25rem !default;				//20px
+$font-size-xl:					1.5rem !default;				//24px
+
+$line-height-xs:				1 !default;
+$line-height-sm:				1.2 !default;
+// $line-height-base:		1.5 !default;
+$line-height-lg:				1.8 !default;
+$line-height-xl:				2 !default;
+
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$border-radius:          .25rem !default;				//4px
+$border-radius-md: 			 .5rem 	!default;				//8px
+
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+$table-border-color-dark:			#dcdddf !default;
+$table-sm-cell-padding: 0.3rem;
+
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background and border color.
+
+$btn-lighten-color:              #fff !default;
+$btn-lighten-bg:                 $brand-lighten !default;
+$btn-lighten-border:             $btn-lighten-bg !default;
+$btn-font-weight:                300 !default;
+
+// $btn-padding-y-sm:               .5rem !default;
+
+
+// Allows for customizing button radius independently from global border radius
+
+$btn-border-radius-sm:           $border-radius !default;
+
+// Forms
+
+$input-padding-y-sm:             .5rem !default;
+
+$form-group-margin-bottom:       ($spacer-y / 2) !default;
+
+// Navbar
+
+$navbar-border-radius:              none !default;
+
+
+//Badge
+$badge-padding-x-sm:               .5rem !default;
+$badge-padding-y-sm:               .25rem !default;
+
+$badge-padding-x-lg:               1rem !default;
+$badge-padding-y-lg:               .5rem !default;
+
+
+// Modals
+
+// Padding applied to the modal body
+
+$modal-lg:                    900px !default;
+$modal-md:                    700px !default;
+$modal-sm:                    400px !default;
+$modal-xs:                    300px !default;
