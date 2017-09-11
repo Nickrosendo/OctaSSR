@@ -19,7 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "assets/css/octadesk.css"
+        "assets/css/octadesk.min.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

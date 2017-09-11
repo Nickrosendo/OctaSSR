@@ -1,0 +1,43 @@
+<nav class="container">
+	<div class="d-flex flex-row hidden-lg-up">
+		<button
+			type="button"
+			data-toggle="collapse"
+			data-target="#od-main-nav"
+			aria-label="Toggle navigation"
+			aria-controls="od-main-nav"
+			aria-expanded="false"
+			class="navbar-toggler">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a class="navbar-brand" [routerLink]="['/']">
+			<img src="/assets/images/logo-octadesk.png" width="153" height="34" alt="Logo octadesk" title="Logo octadesk">
+		</a>
+	</div>
+	<div id="od-main-nav" class="collapse navbar-collapse">
+		<a class="navbar-brand hidden-md-down" [routerLink]="['/']">
+			<img src="/assets/images/logo-octadesk.png" width="153" height="34" alt="Logo octadesk" title="Logo octadesk">
+		</a>
+		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/funcionalidades/atendimento-ao-cliente']">Funcionalidades</a>
+			</li>
+
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/casos-de-sucesso/sistema-de-atendimento']">Cases</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/planos/sistema-de-chamados']">Planos</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/materiais-para-helpdesk']">Materiais</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/contato']">Contato</a>
+			</li>
+		</ul>
+		<div class="form-inline my-2 my-lg-0">
+
+		</div>
+	</div>
+</nav>
