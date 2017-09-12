@@ -4,8 +4,8 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "prestart": "ng build --prod && ngc",
-    "start": "ts-node client/server.ts",
+    "prestart": "ng build --prod && ngc  && webpack",
+    "start": "node dist/server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -25,9 +25,16 @@
     "@angular/router": "^4.2.4",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-beta.4",
     "bootstrap": "^4.0.0-alpha.6",
+    "classlist.js": "^1.1.20150312",
+    "compression": "^1.7.0",
     "core-js": "^2.4.1",
+    "intl": "^1.2.5",
     "jquery": "^3.2.1",
     "rxjs": "^5.4.2",
+    "ts-loader": "^2.3.7",
+    "web-animations-js": "^2.3.1",
+    "webpack": "^3.5.6",
+    "webpack-node-externals": "^1.6.0",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {

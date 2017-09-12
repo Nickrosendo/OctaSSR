@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import { CommonModule } from '@angular/common';
 
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
@@ -10,6 +14,7 @@ import { SuccessStoriesModule } from './success-stories/success-stories.module';
 import { PricingModule } from './pricing/pricing.module';
 import { MaterialsModule } from './materials/materials.module';
 import { ContactModule } from './contact/contact.module';
+import { PartialsModule } from './partials/partials.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +22,9 @@ import { ContactModule } from './contact/contact.module';
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'octa-ssr'}),
+    NgbModule.forRoot(),
+    HttpModule,
+    CommonModule,
     AppRoutingModule,
     LayoutModule,
     HomeModule,
@@ -24,9 +32,9 @@ import { ContactModule } from './contact/contact.module';
     SuccessStoriesModule,
     PricingModule,
     MaterialsModule,
-    ContactModule
+    ContactModule,
+    PartialsModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

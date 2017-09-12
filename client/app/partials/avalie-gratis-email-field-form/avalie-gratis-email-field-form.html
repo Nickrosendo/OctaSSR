@@ -1,0 +1,24 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit($event)" autocomplete="off">
+	<input name="token_rdstation" type="hidden" />
+	<input name="identificador" type="hidden" />
+
+
+	<fieldset [ngClass]="{'has-success': hasSuccess.email, 'has-danger': hasDanger.email,  'placeholder-danger': hasDanger.email}">
+		<div class="input-group">
+			<input
+				type="email"
+				class="form-control"
+				formControlName="email"
+				placeholder="Informe seu email"
+				[(ngModel)]="email"
+				required
+			>
+			<span class="input-group-btn" (click)="validateEmail($event)">
+				<button type="submit" [ngClass]="{'btn-danger': hasDanger.email}" class="btn btn-success u-right-radius-md mt-0 font-size-default cursor-pointer">Avalie grátis</button>
+        <try-octadesk-modal [email]="email"></try-octadesk-modal>
+      </span>
+			<br>
+		</div>
+	</fieldset>
+
+</form>

@@ -1,0 +1,80 @@
+<octadesk-modal></octadesk-modal>
+<ng-template #tryOctadeskModal let-c="close" let-d="dismiss">
+	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="om-OctadeskModal-hidden">
+        <defs>
+            <g id="om-OctadeskModal-icon--close">
+                <path d="M614.4 512l390.4-390.4c25.6-25.6 25.6-70.4 0-102.4-25.6-25.6-70.4-25.6-102.4 0l-390.4 390.4-390.4-390.4c-25.6-25.6-70.4-25.6-102.4 0-25.6 25.6-25.6 70.4 0 102.4l390.4 390.4-390.4 390.4c-25.6 25.6-25.6 70.4 0 102.4 25.6 25.6 70.4 25.6 102.4 0l390.4-390.4 390.4 390.4c25.6 25.6 70.4 25.6 102.4 0 25.6-25.6 25.6-70.4 0-102.4l-390.4-390.4z"></path>
+            </g>
+			<g id="om-OctadeskModal-icon--checkCircle">
+                <path d="M12,1.5C6.2,1.5,1.5,6.2,1.5,12S6.2,22.5,12,22.5S22.5,17.8,22.5,12S17.8,1.5,12,1.5z M12,21.7c-5.3,0-9.7-4.3-9.7-9.7
+                    S6.7,2.3,12,2.3s9.7,4.3,9.7,9.7S17.3,21.7,12,21.7z" />
+                <path d="M16.9,7.7l-6.2,7l-3.7-3c-0.2-0.1-0.4-0.1-0.6,0.1c-0.1,0.2-0.1,0.4,0.1,0.6l4,3.2c0.1,0.1,0.2,0.1,0.3,0.1
+                    c0.1,0,0.2,0,0.3-0.1l6.5-7.3c0.1-0.2,0.1-0.4,0-0.6C17.4,7.5,17.1,7.5,16.9,7.7z" />
+            </g>
+        </defs>
+    </svg>
+	<div class="om-OctadeskModal-content om-OctadeskModal-content--w60 om-OctadeskModal-content--border pt-0">
+		<ol class="row od-ListType od-ListSteps">
+			<li class="col-6 od-ListType-item od-ListSteps-item" [ngClass]="{'is-active': !success}">
+				<span class="od-ListSteps-item-number">1</span>
+				<p class="od-ListSteps-item-text">Dados<br>cadastrais</p>
+			</li>
+			<li class="col-6 od-ListType-item od-ListSteps-item" [ngClass]="{'is-active': success}">
+				<span class="od-ListSteps-item-number">2</span>
+				<p class="od-ListSteps-item-text">Validação<br>e ativação</p>
+			</li>
+		</ol>
+
+		<div class="om-OctadeskModal-form" *ngIf="!success">
+			<p class="om-OctadeskModal-text">Agende uma avaliação gratuita!</p>
+			<evaluation-form
+				[email]="Email"
+				[submit-text]="'Quero avaliar o Octadesk'"
+				(onSubmitted)="onSubmitted($event)">
+			</evaluation-form>
+		</div>
+
+		<div class="om-OctadeskModal-success text-center py-11" *ngIf="success">
+			<svg viewBox="0 0 24 24" width="80" height="80">
+				<use xlink:href="#om-OctadeskModal-icon--checkCircle"></use>
+			</svg>
+			<p>Estamos validando as suas informações.<br>Aguarde o contato da nossa equipe<br>para liberar o seu acesso.</p>
+		</div>
+
+	</div>
+	<div class="om-OctadeskModal-highlight om-OctadeskModal-highlight--w40 om-OctadeskModal-cf py-5 px-2">
+		<div class="om-OctadeskModal-text">
+			<i class="icon-quotes-left text-info"></i> O Octadesk consegue agregar todas as informações da empresa necessárias para um atendimento personalizado de forma que o cliente se sinta conhecido e especial desde o primeiro momento. <i class="icon-quotes-right text-info"></i>
+		</div>
+		<div class="row d-flex align-items-center my-3">
+			<div class="col-4">
+				<div class="rounded-circle od-Statement-item-thumb od-Statement-item-thumb--65">
+					<img src="/assets/images/customers/rodrigo-von.png" alt="Rodrigo Von" title="Rodrigo Von">
+				</div>
+			</div>
+			<div class="col-8 od-Statement-item-signature om-OctadeskModal-text">
+				<strong>Rodrigo Von</strong><br> Sócio Diretor<br> Plano &amp; Plano
+			</div>
+		</div>
+		<ul class="row flex-items-center od-ListType">
+			<li class="col-6 text-center od-ListType-item">
+				<img class="od-Customers-image--size w-100" src="/assets/images/customers/ald-automotive.png" alt="ALD Automotive" title="ALD Automotive">
+			</li>
+			<li class="col-6 text-center od-ListType-item">
+				<img class="od-Customers-image--size w-100" src="/assets/images/customers/castelatto.png" alt="Castelatto" title="Castelatto">
+			</li>
+			<li class="col-6 text-center od-ListType-item">
+				<img class="od-Customers-image--size w-100" src="/assets/images/customers/roge.png" alt="Roge" title="Roge">
+			</li>
+			<li class="col-6 text-center od-ListType-item">
+				<img class="od-Customers-image--size w-100" src="/assets/images/customers/zambon.png" alt="Zambon" title="Zambon">
+			</li>
+		</ul>
+    </div>
+	<button type="button" class="om-OctadeskModal-close" title="close" aria-label="Close" (click)="close()">
+        <svg viewBox="0 0 1024 1024" width="13" height="13">
+            <use xlink:href="#om-OctadeskModal-icon--close"></use>
+        </svg>
+    </button>
+</ng-template>
+<ng-template ngbModalContainer></ng-template>

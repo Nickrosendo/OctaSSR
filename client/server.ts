@@ -7,11 +7,15 @@ import * as express from 'express';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
-const PORT = 8000;
+const PORT = 1000;
+
+const compression = require('compression');
 
 enableProdMode();
 
 const app = express();
+
+app.use(compression());
 
 let template = readFileSync(join(__dirname, '..', 'dist', 'index.html')).toString();
 
